@@ -43,7 +43,7 @@ const Clients = () => {
       };
 
     useEffect(() => {
-        fetch('http://localhost:7878/api/clients')
+        fetch('https://fatmonk.dupbsdaa.com/api/clients')
             .then(response => response.json())
             .then(data => setClients(data))
             .catch(error => console.error('Error fetching clients:', error));
@@ -71,7 +71,7 @@ const Clients = () => {
 
     const handleDeleteConfirmation = () => {
         // Call the delete API with deleteClientId
-        fetch(`http://localhost:7878/api/clients/${deleteClientId}`, {
+        fetch(`https://fatmonk.dupbsdaa.com//api/clients/${deleteClientId}`, {
             method: 'DELETE',
         })
         .then(response => {
@@ -141,7 +141,7 @@ const Clients = () => {
                                 <th>{index + 1}</th>
                                 <td>
                                     {client.logo && (
-                                        <img src={`http://localhost:7878/uploads/${client.logo.filename}`} alt={client.name} className="h-12 w-12 rounded-sm object-cover" />
+                                        <img src={`https://fatmonk.dupbsdaa.com/uploads/${client.logo.filename}`} alt={client.name} className="h-12 w-12 rounded-sm object-cover" />
                                     )}
                                 </td>
                                 <td>{client.name}</td>

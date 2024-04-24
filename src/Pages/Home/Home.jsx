@@ -27,7 +27,7 @@ const Home = () => {
                         </div>
                     </li>
                     <li className='mt-6 hover:text-white cursor-pointer'>
-                        <Link to="/jobs" className='gap-5 flex items-center'>
+                        <Link to="/" className='gap-5 flex items-center'>
                         <BriefcaseIcon className="h-5 w-5 text-[#CBD5E1]" />
                         <a>Job Post</a>
                         </Link>

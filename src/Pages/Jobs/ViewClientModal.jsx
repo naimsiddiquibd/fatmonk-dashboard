@@ -7,7 +7,7 @@ const CreateClientModal = ({ isOpen, onClose, clientId }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:7878/api/clients/${clientId}`);
+      const response = await fetch(`https://fatmonk.dupbsdaa.com/api/clients/${clientId}`);
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
@@ -31,7 +31,7 @@ const CreateClientModal = ({ isOpen, onClose, clientId }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, clientId]); // Remove clientId from dependency array if fetchData doesn't depend on it
 
-  const clientLogo = useMemo(() => clients.logo ? `http://localhost:7878/uploads/${clients.logo.filename}` : null, [clients]);
+  const clientLogo = useMemo(() => clients.logo ? `https://fatmonk.dupbsdaa.com/uploads/${clients.logo.filename}` : null, [clients]);
 
   return (
     <>

@@ -43,7 +43,7 @@ const Clients = () => {
       };
 
     useEffect(() => {
-        fetch('http://localhost:7878/api/clients')
+        fetch('https://fatmonk.dupbsdaa.com/api/clients')
             .then(response => response.json())
             .then(data => setClients(data))
             .catch(error => console.error('Error fetching clients:', error));
@@ -71,7 +71,7 @@ const Clients = () => {
 
     const handleDeleteConfirmation = () => {
         // Call the delete API with deleteClientId
-        fetch(`http://localhost:7878/api/clients/${deleteClientId}`, {
+        fetch(`https://fatmonk.dupbsdaa.com/api/clients/${deleteClientId}`, {
             method: 'DELETE',
         })
         .then(response => {
@@ -100,11 +100,11 @@ const Clients = () => {
             {/* Delete Confirmation Popup */}
             {isDeleteConfirmationOpen && (
                 <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-[9999]">
-                    <div className="bg-zinc-900 p-5 rounded-lg shadow-md">
-                        <p className='text-gray-400'>Are you sure you want to delete this client?</p>
+                    <div className="bg-zinc-900 p-5 rounded-lg shadow-md w-96 lg:w-[520px]">
+                        <p className='text-gray-200'>Are you sure you want to delete this client?</p>
                         <div className="flex justify-end mt-4">
                             <button className="px-4 py-2 mr-2 bg-red-500 text-white rounded" onClick={handleDeleteConfirmation}>Yes</button>
-                            <button className="px-4 py-2 bg-gray-300 rounded" onClick={() => setIsDeleteConfirmationOpen(false)}>No</button>
+                            <button className="px-4 py-2 bg-gray-100 rounded" onClick={() => setIsDeleteConfirmationOpen(false)}>No</button>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ const Clients = () => {
                                 <th>{index + 1}</th>
                                 <td>
                                     {client.logo && (
-                                        <img src={`http://localhost:7878/uploads/${client.logo.filename}`} alt={client.name} className="h-12 w-12 rounded-sm object-cover" />
+                                        <img src={`https://fatmonk.dupbsdaa.com/uploads/${client.logo.filename}`} alt={client.name} className="h-12 w-12 rounded-sm object-cover" />
                                     )}
                                 </td>
                                 <td>{client.name}</td>

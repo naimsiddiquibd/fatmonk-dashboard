@@ -16,7 +16,7 @@ const UpdateClientModal = ({ isOpen, onClose, clientId, onClientUpdated }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:7878/api/clients/${clientId}`
+          `https://fatmonk.dupbsdaa.com/api/clients/${clientId}`
         );
         setClients(response.data);
         setLoading(false);
@@ -61,7 +61,7 @@ const UpdateClientModal = ({ isOpen, onClose, clientId, onClientUpdated }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:7878/api/clients/${clientId}`,
+        `https://fatmonk.dupbsdaa.com/api/clients/${clientId}`,
         formDataToSend
       );
 

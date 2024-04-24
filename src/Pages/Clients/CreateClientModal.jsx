@@ -23,7 +23,7 @@ const CreateClientModal = ({ isOpen, onClose, onClientCreated }) => {
 
     try {
       // Make POST request
-      const response = await axios.post("http://localhost:7878/api/clients", formData, {
+      const response = await axios.post("https://fatmonk.dupbsdaa.com/api/clients", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -45,7 +45,7 @@ const CreateClientModal = ({ isOpen, onClose, onClientCreated }) => {
       {isOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-[#141C2F] bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-zinc-900 p-5 rounded-lg shadow-md">
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-1 w-96 lg:w-[500px]">
               <div className="relative">
                 <input
                   placeholder="Company name"

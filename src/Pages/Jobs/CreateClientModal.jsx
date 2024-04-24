@@ -23,7 +23,7 @@ const CreateClientModal = ({ isOpen, onClose, onClientCreated }) => {
 
     try {
       // Make POST request
-      const response = await axios.post("http://localhost:7878/api/clients", formData, {
+      const response = await axios.post("https://fatmonk.dupbsdaa.com/api/clients", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
